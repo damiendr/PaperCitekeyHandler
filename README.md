@@ -12,7 +12,7 @@ I use this helper together with the Magic Citations feature of Papers2 and a mod
 
 ## Installation
 
-First compile the project in XCode.
+First compile the project in XCode (tested for MacOSX 10.8).
 
 Then simply copy PapersCitekeyHandler.app to `/Applications/` or to `~/Library/Services/`. There is no need to start the application explicitely. This is a background application with no settings.
 
