@@ -20,7 +20,7 @@ To use the text service, first enable it in the Keyboard preference pane. One ma
 
 ## How it works
 
-Most of the work is done by a Python script (open_citekey.py) that searches the Papers2 SQLite database located at `/Users/username/Library/Application Support/Papers2/Library.papers2/Database.papersdb` for papers matching the supplied citekey.
+Most of the work is done by a Python script (open_citekey.py) that searches the Papers2 SQLite database located at `~/Library/Application Support/Papers2/Library.papers2/Database.papersdb` for papers matching the supplied citekey.
 
 For details of citekey generation, see this document:
 http://support.mekentosj.com/kb/read-write-cite/universal-citekey
