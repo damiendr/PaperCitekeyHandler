@@ -12,7 +12,9 @@ I use this helper together with the Magic Citations feature of Papers2 and a mod
 
 ## Installation
 
-Simply copy PapersCitekeyHandler.app to `/Applications/` or to `~/Library/Services/`. There is no need to start the application explicitely. This is a background application with no settings.
+First compile the project in XCode.
+
+Then simply copy PapersCitekeyHandler.app to `/Applications/` or to `~/Library/Services/`. There is no need to start the application explicitely. This is a background application with no settings.
 
 To use the text service, first enable it in the Keyboard preference pane. One may need to log out and log back in for the service to appear in the menu.
 
