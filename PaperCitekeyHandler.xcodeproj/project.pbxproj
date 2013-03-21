@@ -13,7 +13,7 @@
 		B984B7C916FB2A3200F083C6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B984B7C716FB2A3200F083C6 /* Credits.rtf */; };
 		B984B7CC16FB2A3200F083C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B984B7CB16FB2A3200F083C6 /* AppDelegate.m */; };
 		B984B7CF16FB2A3300F083C6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B984B7CD16FB2A3300F083C6 /* MainMenu.xib */; };
-		B984B7D616FB2C9600F083C6 /* open_citekey.py in Resources */ = {isa = PBXBuildFile; fileRef = B984B7D516FB2C9600F083C6 /* open_citekey.py */; };
+		B9E1223A16FB63DC00EBE994 /* open_citekey.py in Resources */ = {isa = PBXBuildFile; fileRef = B9E1223916FB63DC00EBE994 /* open_citekey.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		B984B7CA16FB2A3200F083C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B984B7CB16FB2A3200F083C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B984B7CE16FB2A3300F083C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B984B7D516FB2C9600F083C6 /* open_citekey.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = open_citekey.py; path = ../../open_citekey.py; sourceTree = "<group>"; };
+		B9E1223916FB63DC00EBE994 /* open_citekey.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = open_citekey.py; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		B984B7BF16FB2A3200F083C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B984B7D516FB2C9600F083C6 /* open_citekey.py */,
+				B9E1223916FB63DC00EBE994 /* open_citekey.py */,
 				B984B7C016FB2A3200F083C6 /* PaperCitekeyHandler-Info.plist */,
 				B984B7C116FB2A3200F083C6 /* InfoPlist.strings */,
 				B984B7C416FB2A3200F083C6 /* main.m */,
@@ -159,7 +159,7 @@
 				B984B7C316FB2A3200F083C6 /* InfoPlist.strings in Resources */,
 				B984B7C916FB2A3200F083C6 /* Credits.rtf in Resources */,
 				B984B7CF16FB2A3300F083C6 /* MainMenu.xib in Resources */,
-				B984B7D616FB2C9600F083C6 /* open_citekey.py in Resources */,
+				B9E1223A16FB63DC00EBE994 /* open_citekey.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
