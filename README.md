@@ -27,4 +27,6 @@ The Python script is wrapped in a Cocoa background application that registers it
 
 ## License
 
+See LICENSE.txt
+
 Note that this tool is not affiliated to or endorsed by the makers of the Papers2 app.
