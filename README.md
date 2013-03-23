@@ -12,13 +12,15 @@ I use this helper together with the Magic Citations feature of Papers2 and a mod
 
 ## Installation
 
-Simply copy PapersCitekeyHandler.app to `/Applications/` or to `~/Library/Services/`. There is no need to start the application explicitely. This is a background application with no settings.
+First compile the project in XCode (tested for MacOSX 10.8).
+
+Then simply copy PapersCitekeyHandler.app to `/Applications/` or to `~/Library/Services/`. There is no need to start the application explicitely. This is a background application with no settings.
 
 To use the text service, first enable it in the Keyboard preference pane. One may need to log out and log back in for the service to appear in the menu.
 
 ## How it works
 
-Most of the work is done by a Python script (open_citekey.py) that searches the Papers2 SQLite database located at `/Users/username/Library/Application Support/Papers2/Library.papers2/Database.papersdb` for papers matching the supplied citekey.
+Most of the work is done by a Python script ([open_citekey.py](https://github.com/damiendrix/PaperCitekeyHandler/blob/master/open_citekey.py)) that searches the Papers2 SQLite database located at `~/Library/Application Support/Papers2/Library.papers2/Database.papersdb` for papers matching the supplied citekey.
 
 For details of citekey generation, see this document:
 http://support.mekentosj.com/kb/read-write-cite/universal-citekey
