@@ -48,16 +48,12 @@ def find_pdf(citekey):
     year = suffix[:4]
     citehash = suffix[4:]
     
-<<<<<<< HEAD
     # Papers does not store the hash part of the citekey in its database.
     # First do a partial match on the base (author) and year:
-    conn = sqlite3.connect(dbpath)
-=======
     conn = sqlite3.connect(dbpath)
 
     # Papers does not store the hash part of the citekey in its database.
     # First do a partial match on the base (author) and year:
->>>>>>> 8c99676d5add10a8d3c46a796af582073efb05af
     candidates = conn.execute(
         "SELECT ROWID, canonical_title, doi FROM Publication "
         "WHERE citekey_base = ? AND substr(publication_date, 3, 4) == ?",
