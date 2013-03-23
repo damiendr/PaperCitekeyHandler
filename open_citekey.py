@@ -62,9 +62,10 @@ def find_pdf(citekey):
         if (citehash == gen_title_hash(title) or
             citehash == gen_doi_hash(doi)):
             # Got a match for the complete citekey!
-            # Return the path of the first PDF entry we find for this paper:
+            # Let's see if we can find any PDF files for this paper:
             pdfs = conn.execute("SELECT Path FROM PDF WHERE object_id = ?",
                                 (rowid,))
+            # Return the first PDF entry:
             for (pdf_path,) in pdfs:
                 return os.path.join(basepath, pdf_path)
             # If no PDF was found, move on to next matching paper:
