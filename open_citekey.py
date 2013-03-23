@@ -42,7 +42,7 @@ def gen_doi_hash(doi):
     return gen_hash(doi, doi_suffix)
 
 
-def find_pdf(citekey):
+def find_pdf(db, citekey):
     # Split the citekey into <base>:<year><citehash>
     base, suffix = citekey.split(":")
     year = suffix[:4]
@@ -50,19 +50,18 @@ def find_pdf(citekey):
     
     # Papers does not store the hash part of the citekey in its database.
     # First do a partial match on the base (author) and year:
-    conn = sqlite3.connect(dbpath)
-    candidates = conn.execute(
+    candidates = db.execute(
         "SELECT ROWID, canonical_title, doi FROM Publication "
         "WHERE citekey_base = ? AND substr(publication_date, 3, 4) == ?",
         (base, year))
     
-    # Now generate the hashes for these candidates and look for an exact match:
+    # Now generate hashes for these candidates and look for an exact match:
     for (rowid, title, doi) in candidates:
         if (citehash == gen_title_hash(title) or
             citehash == gen_doi_hash(doi)):
             # Got a match for the complete citekey!
             # Let's see if we can find any PDF files for this paper:
-            pdfs = conn.execute("SELECT Path FROM PDF WHERE object_id = ?",
+            pdfs = db.execute("SELECT Path FROM PDF WHERE object_id = ?",
                                 (rowid,))
             # Return the first PDF entry:
             for (pdf_path,) in pdfs:
@@ -74,7 +73,11 @@ def find_pdf(citekey):
 
 
 def open_citekey(citekey):
-    fpath = find_pdf(citekey)
+    conn = sqlite3.connect(dbpath)
+    try:
+        fpath = find_pdf(conn, citekey)
+    finally:
+        conn.close()
     subprocess.call(["open", fpath])
 
 
